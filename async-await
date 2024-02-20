@@ -1,0 +1,18 @@
+async function abc () {
+
+    try {
+        const url = await fetch(`https://abcdefgh/${abc}`) ;
+
+        if (!url.ok) {
+            throw new Error ("could not fetch");
+        }
+
+        const data = await url.json() ;
+        console.log(data);
+    }
+
+    catch(error) {
+        console.error(error) ;
+    }
+}
+
